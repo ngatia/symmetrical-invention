@@ -1,4 +1,4 @@
-node("docker") {
+node("master") {
     docker.withRegistry('https://hub.docker.com/u/ngatia/', 'dockerhub') {
 
         git url: "https://github.com/ngatia/symmetrical-invention", credentialsId: 'b99df07a-54e2-446a-bd3f-2355d5c9fb15'
