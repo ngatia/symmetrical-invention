@@ -1,7 +1,7 @@
 node("master") {
     docker.withRegistry('https://hub.docker.com/u/ngatia/', 'dockerhub') {
 
-        git url: "https://github.com/ngatia/symmetrical-invention", credentialsId: 'b99df07a-54e2-446a-bd3f-2355d5c9fb15'
+        git url: "https://github.com/ngatia/symmetrical-invention", credentialsId: 'github'
 
         sh "git rev-parse HEAD > .git/commit-id"
         def commit_id = readFile('.git/commit-id').trim()
